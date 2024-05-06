@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jordyn Chase</title>
+    <meta name="description" content="portfolio site">
+    <link rel="icon" href="res/favicon.jpg">
+    <link rel="stylesheet" href="res/global.css" type="text/css">
+    <style>
+    body {
+margin: 0;
+}
+
+.image-grid {
+--gap: 32px;
+--num-cols: 4;
+--row-height: 300px;
+
+box-sizing: border-box;
+padding: var(--gap);
+
+display: grid;
+grid-template-columns: repeat(var(--num-cols), 1fr);
+grid-auto-rows: var(--row-height);
+gap: var(--gap);
+}
+
+.image-grid>img {
+width: 100%;
+height: 100%;
+object-fit: scale-down;
+transition: 1s;
+
+}
+
+.image-grid:hover  img{
+
+  box-shadow:0 0 20px 10px rgba(0,0,0,0.5);
+}
+
+.image-grid-col-2 {
+grid-column: span 2;
+}
+
+.image-grid-row-2 {
+grid-row: span 2;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1024px) {
+.image-grid {
+--num-cols: 2;
+--row-height: 200px;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="image-grid">
+      <img src="res/magazinespread.jpg" alt="magazine spread">
+      <img src="res/jazz.jpg" alt="what is jazz poster">
+      <img src="res/murdermystery.jpg" alt="murder mystery poster">
+      <img src="res/horse.jpg" alt="abstract horse">
+      <img src="res/menu.jpg" alt="french menu">
+      <img src="res/jenmorla.jpg" alt="Jennifer Morla poster">
+      <img src="res/artshow.jpg" alt="invitation">
+    </div>
+</body>
+</html>
